@@ -238,6 +238,7 @@ class Trainer:
 
             # Train.
             for i, batch in enumerate(self.train_loader):
+                print(i)
                 batch = batch if isinstance(batch, (tuple, list)) else (batch, None)
                 x, y = batch
                 self._examples_processed += x.shape[0]
